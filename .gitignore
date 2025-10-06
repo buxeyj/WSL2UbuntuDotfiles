@@ -1,0 +1,5 @@
+# Neovim cache and temp files
+.config/nvim/plugin/
+.config/nvim/.repro/
+.config/nvim/.cache/
+.config/nvim/lazy-lock.json
