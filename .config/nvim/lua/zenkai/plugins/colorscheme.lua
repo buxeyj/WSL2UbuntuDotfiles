@@ -30,7 +30,7 @@ return {
 	{
 		"LazyVim/LazyVim",
 		config = function()
-			vim.cmd("colorscheme kanagawa") -- change this to any installed theme
+			vim.cmd("colorscheme gruvbox") -- change this to any installed theme
 		end,
 	},
 }
