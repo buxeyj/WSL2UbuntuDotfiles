@@ -30,7 +30,23 @@ return {
 	{
 		"LazyVim/LazyVim",
 		config = function()
-			vim.cmd("colorscheme dracula") -- change this to any installed theme
+			-- 🌙 Set your preferred theme here
+			vim.cmd("colorscheme kanagawa")
+
+			-- 🔒 Disable all italics globally (for every theme)
+			vim.api.nvim_create_autocmd("ColorScheme", {
+				pattern = "*",
+				callback = function()
+					vim.cmd([[
+            highlight Comment cterm=NONE gui=NONE
+            highlight Keyword cterm=NONE gui=NONE
+            highlight Function cterm=NONE gui=NONE
+            highlight Type cterm=NONE gui=NONE
+            highlight Statement cterm=NONE gui=NONE
+            highlight Identifier cterm=NONE gui=NONE
+          ]])
+				end,
+			})
 		end,
 	},
 }
